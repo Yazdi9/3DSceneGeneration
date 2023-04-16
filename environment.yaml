@@ -1,0 +1,44 @@
+name: scenedreamer
+channels:
+  - pytorch
+  - nvidia
+dependencies:
+  - python=3.9
+  - pytorch=1.12.0
+  - cudatoolkit=11.3
+  - torchvision
+  - pip
+  - numpy
+  - scipy
+  - scikit-image
+  - pip:
+    - einops
+    - noise
+    - opencv-python
+    - cmake
+    - pynvml
+    - Pillow>=8.3.2
+    - tqdm==4.35.0
+    - wget
+    - cython
+    - lmdb
+    - av
+    - opencv-python
+    - opencv-contrib-python
+    - imutils
+    - imageio-ffmpeg
+    - qimage2ndarray
+    - albumentations
+    - requests==2.25.1
+    - nvidia-ml-py3==7.352.0
+    - pyglet
+    - timm
+    - diskcache
+    - boto3
+    - awscli_plugin_endpoint
+    - awscli
+    - rsa
+    - wandb
+    - tensorboard
+    - lpips
+    - matplotlib
