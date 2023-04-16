@@ -1,60 +1,26 @@
 <div align="center">
 
-<h1>SceneDreamer: Unbounded 3D Scene Generation from 2D Image Collections</h1>
-
-<div>
-    <a href='https://frozenburning.github.io/' target='_blank'>Zhaoxi Chen</a>&emsp;
-    <a href='https://wanggcong.github.io/' target='_blank'>Guangcong Wang</a>&emsp;
-    <a href='https://liuziwei7.github.io/' target='_blank'>Ziwei Liu</a>
-</div>
-<div>
-    S-Lab, Nanyang Technological University
-</div>
+<h1> 3D Scene Generation from 2D Images</h1>
 
 <div>
 
-<a target="_blank" href="https://arxiv.org/abs/2302.01330">
-  <img src="https://img.shields.io/badge/arXiv-2302.01330-b31b1b.svg" alt="arXiv Paper"/>
-</a>
-<a target="_blank" href="https://huggingface.co/spaces/FrozenBurning/SceneDreamer">
-  <img src="https://img.shields.io/badge/Demo-%F0%9F%A4%97%20Hugging%20Face-blue" alt="HuggingFace"/>
-</a>
-<a href="https://hits.seeyoufarm.com"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FFrozenBurning%2FSceneDreamer&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false"/></a>
 </div>
-
-
-<h4>TL;DR</h4>
-<h5>SceneDreamer learns to generate unbounded 3D scenes from in-the-wild 2D image collections. <br> Our method can synthesize diverse landscapes across different styles, with 3D consistency, well-defined depth, and free camera trajectory.</h5>
-
-### [Paper](https://arxiv.org/abs/2302.01330) | [Project Page](https://scene-dreamer.github.io/) | [Video](https://youtu.be/nEfSKL2_FoA) | [Hugging Face :hugs:](https://huggingface.co/spaces/FrozenBurning/SceneDreamer)
-
-<br>
 
 
 <tr>
-    <img src="./assets/teaser.gif" width="100%"/>
+<img  src="https://user-images.githubusercontent.com/33378412/232312245-a1674d48-9726-4bb2-8868-9fbf4a33ca58.png" width="500" height="420">
+<img  src="https://user-images.githubusercontent.com/33378412/232312257-3dc680c5-9e94-4392-8334-fe32addadf1f.png" width="500" height="420"> 
+<img  src="https://user-images.githubusercontent.com/33378412/232312267-8b9a0016-0452-4029-9e1a-7bb81a6e3310.png" width="500" height="420">
+<img  src="https://user-images.githubusercontent.com/33378412/232312341-99cd7140-123f-4e85-8037-3a7eca9f40dd.png" width="500" height="420" >
+<img  src="https://user-images.githubusercontent.com/33378412/232312452-a78874f8-6994-4957-8ff9-ae8008f6651e.png" width="500" height="420" >
+<img  src="https://user-images.githubusercontent.com/33378412/232312446-fcec1649-a8c4-4b32-b10a-e2ad567865dd.png" width="500" height="420" >
+
+
 </tr>
 
 </div>
 
-## Updates
 
-[04/2023] Hugging Face demo released! [![demo](https://img.shields.io/badge/Demo-%F0%9F%A4%97%20Hugging%20Face-blue)](https://huggingface.co/spaces/FrozenBurning/SceneDreamer)
-
-[04/2023] Inference code released!
-
-[02/2023] Paper uploaded to arXiv. [![arXiv](https://img.shields.io/badge/arXiv-2302.01330-b31b1b.svg)](https://arxiv.org/abs/2302.01330)
-
-## Citation
-If you find our work useful for your research, please consider citing this paper:
-```
-@inproceedings{chen2023sd,
-    title={SceneDreamer: Unbounded 3D Scene Generation from 2D Image Collections},
-    author={Chen, Zhaoxi and Wang, Guangcong and Liu, Ziwei},
-    booktitle={arXiv},
-    year={2023},
-}
-```
 
 ## Installation
 We highly recommend using [Anaconda](https://www.anaconda.com/) to manage your python environment. You can setup the required environment by the following commands:
@@ -122,32 +88,16 @@ The results will be saved under `./test` as the following structures:
 
 Furthermore, you can modify the parameters for rendering in [scenedreamer_inference.yaml](./configs/scenedreamer_inference.yaml), detailed as follows:
 
-| Parameter | Recommended Range | Description |
-| :---------- | :------------: | :---------- |
-| `cam_mode` | 0 - 9 | Different camera trajectries for rendered sequence |
-| `cam_maxstep` | 0 - ∞ | Total number of frames. Increase for a more smooth camera movement. |
-| `resolution_hw` | [540, 960] - [2160, 3840] | The resolution of each rendered frame |
-| `num_samples` | 12 - 40 | The number of sampled points per camera ray |
-| `cam_ang` | 50 - 130 | The FOV of camera view |
-| `scene_size` | 1024 - 2048 | The spatial resolution of sampled scene. |
 
 Here is a sampled scene with our default rendering parameters:
 <tr>
     <img src="./assets/sample_traj.gif" width="100%"/>
+    
 </tr>
+  https://user-images.githubusercontent.com/33378412/232312533-a7507628-cd6d-410f-9c84-9d95b965dd35.mp4
 
 ### Gradio Demo
 You can also locally launch our demo with gradio UI by:
 ```bash
 python app_gradio.py
 ```
-Alternatively, you can run the demo online [![Open in Spaces](https://huggingface.co/datasets/huggingface/badges/raw/main/open-in-hf-spaces-sm.svg)](https://huggingface.co/spaces/FrozenBurning/SceneDreamer)
-
-## License
-
-Distributed under the S-Lab License. See [LICENSE](./LICENSE) for more information. Part of the codes are also subject to the [LICENSE of imaginaire](https://github.com/NVlabs/imaginaire/blob/master/LICENSE.md) by NVIDIA.
-
-## Acknowledgements
-This work is supported by the National Research Foundation, Singapore under its AI Singapore Programme, NTU NAP, MOE AcRF Tier 2 (T2EP20221-0033), and under the RIE2020 Industry Alignment Fund - Industry Collaboration Projects (IAF-ICP) Funding Initiative, as well as cash and in-kind contribution from the industry partner(s).
-
-SceneDreamer is implemented on top of the [imaginaire](https://github.com/NVlabs/imaginaire). Thanks [torch-ngp](https://github.com/ashawkey/torch-ngp) for the pytorch CUDA implementation of neural hash grid.
