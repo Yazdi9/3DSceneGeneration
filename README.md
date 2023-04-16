@@ -20,10 +20,8 @@
 
 </div>
 
-
-
 ## Installation
-We highly recommend using [Anaconda](https://www.anaconda.com/) to manage your python environment. You can setup the required environment by the following commands:
+You can setup the required environment by the following commands:
 ```bash
 # install python dependencies
 conda env create -f environment.yaml
@@ -86,18 +84,17 @@ The results will be saved under `./test` as the following structures:
         └── style.npy # sampled style code
 ```
 
-Furthermore, you can modify the parameters for rendering in [scenedreamer_inference.yaml](./configs/scenedreamer_inference.yaml), detailed as follows:
 
-
-Here is a sampled scene with our default rendering parameters:
+Here is a sampled scene with my default rendering parameters:
 <tr>
     <img src="./assets/sample_traj.gif" width="100%"/>
-    
+   <img src="https://user-images.githubusercontent.com/33378412/232312533-a7507628-cd6d-410f-9c84-9d95b965dd35.mp4" width="100%"/>
 </tr>
-  https://user-images.githubusercontent.com/33378412/232312533-a7507628-cd6d-410f-9c84-9d95b965dd35.mp4
 
+
+    
 ### Gradio Demo
-You can also locally launch our demo with gradio UI by:
+You can also locally launch  demo with gradio UI by:
 ```bash
 python app_gradio.py
 ```
